@@ -9,6 +9,9 @@ import orderRoutes from "./routes/order.routes.js";
 import errorHandler from "./middlewares/error.middleware.js";
 
 const app = express();
+app.use(cors({
+  origin: "https://order-management-system-1.netlify.app"
+}));
 
 app.use(cors());
 app.use(express.json());
