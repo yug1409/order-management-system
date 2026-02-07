@@ -10,10 +10,10 @@ import errorHandler from "./middlewares/error.middleware.js";
 
 const app = express();
 app.use(cors({
-  origin: "https://order-management-system-1.netlify.app"
+  origin: "https://order-management-system-1.netlify.app",
+  credentials: true
 }));
 
-app.use(cors());
 app.use(express.json());
 app.use(helmet());
 app.use(rateLimit({ windowMs: 15 * 60 * 1000, max: 100 }));
